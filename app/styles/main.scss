@@ -1,0 +1,69 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'bourbon/app/assets/stylesheets/bourbon';
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+#canvas {
+    display: none;
+}
+
+#container {
+    width: 100%;
+}
+
+#nav {
+    width: 100%;
+    z-index: 100;
+    @include clearfix();
+
+    ul {
+        display: block;
+        float: right;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            text-align: right;
+            display: inline-block;
+            padding: 1em;
+        }
+    }
+}
+
+
+#grid {
+    position: relative;
+    @include clearfix();
+    padding: 5px;
+    
+    .cell {
+        padding: 5px;
+        position: relative;
+        background: #ccc;
+        width: 20vw;
+        height: 20vw;
+        overflow: hidden;
+        display: block;
+        float: left;
+
+        img, video {
+            display: block;
+            height: 100%;
+            @include transform( translateX(-12.5%) );
+        }
+
+        &.video {
+            height: 40vw;
+            width: 40vw;
+        }
+    }
+
+}

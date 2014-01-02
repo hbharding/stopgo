@@ -1,0 +1,18 @@
+<nav id="nav">
+  <ul>
+    <li><a ng-click="getCamera()">Start Webcam</a></li>
+    <li><a ng-click="takePhoto()">Take snapshot</a></li>
+    <li><a href="#/animate/">View animation</a></li>
+  </ul>
+</nav>
+
+<canvas id="canvas" width="500" height="375"></canvas>
+
+<div id="grid">
+  <div class="cell video">
+    <video autoplay id="videoElement"></video>
+  </div>
+  <div ng-repeat="image in images" class="cell" style="background-image: url({{image}})">
+    <!-- <img ng-src="{{image}}" /> -->
+  </div>
+</div>
