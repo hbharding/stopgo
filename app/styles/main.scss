@@ -42,10 +42,10 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 #grid {
     position: relative;
     @include clearfix();
-    padding: 5px;
-    
+    //border: 5px solid #fff;
+
     .cell {
-        padding: 5px;
+        border: 5px solid #fff;
         position: relative;
         background: #ccc;
         width: 20vw;

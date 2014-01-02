@@ -26,20 +26,20 @@ angular.module('stopgoApp')
 		}
     };
 
-    $scope.takePhoto = function() {
-    	var v = document.getElementById('videoElement'),
-	    	canvas = document.getElementById('canvas'),
-	    	context = canvas.getContext('2d'),
-	    	w = canvas.width,
-	    	h = canvas.height;
+    // $scope.takePhoto = function() {
+    // 	var v = document.getElementById('videoElement'),
+	   //  	canvas = document.getElementById('canvas'),
+	   //  	context = canvas.getContext('2d'),
+	   //  	w = canvas.width,
+	   //  	h = canvas.height;
 
-	    	if(v.paused || v.ended) return false;
-	    	context.drawImage(v,0,0,w,h); // draw video feed to canvas
-	    	var uri = canvas.toDataURL("image/png"); // convert canvas to data URI
-	    	// imgtag.src = uri; // add URI to IMG tag src
+	   //  	if(v.paused || v.ended) return false;
+	   //  	context.drawImage(v,0,0,w,h); // draw video feed to canvas
+	   //  	var uri = canvas.toDataURL("image/png"); // convert canvas to data URI
+	   //  	// imgtag.src = uri; // add URI to IMG tag src
 
-	    	$scope.images.unshift(uri);
-    };
+	   //  	$scope.images.unshift(uri);
+    // };
 
   });
 
